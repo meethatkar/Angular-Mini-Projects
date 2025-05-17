@@ -1,0 +1,27 @@
+<div id="todo">
+  <div id="header">
+  <p>
+    Welcome TO GeeksForGeeks TODO Page
+  </p>
+</div>
+
+<div id="input-container">
+  <div id="input">
+  <input type="text" name="task" id="task_name" placeholder="Enter Task" #task_name>
+  <button (click)="addTask(task_name.value)"> ADD TASK </button>
+</div>
+</div>
+
+<div id="tasks">
+    @for(task of tasks; track task;let index = $index){
+    <div class="task">
+        <h3> {{task}} </h3>
+        <button (click)="deleteTask(index)"> DELETE </button>
+        <!-- <h3> TASK TEMP TEST </h3>
+        <button> DELETE </button> -->
+    </div>
+}
+</div>
+</div>
+
+<!-- <app-task id="taskID"></app-task> -->
